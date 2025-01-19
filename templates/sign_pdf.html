@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subir PDF</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Firmar PDF</h1>
+    <form action="/sign-pdf" method="post" enctype="multipart/form-data">
+        <label for="pdf">Subir PDF:</label>
+        <input type="file" id="pdf" name="pdf" accept="application/pdf" required>
+        <br><br>
+        <button type="submit">Firma PDF</button>
+    </form>
+    <p><a href="/dashboard">Regresar al Inicio</a></p>
+</body>
+</html>
